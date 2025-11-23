@@ -1,0 +1,25 @@
+# ========================
+# MONGODB ATLAS CONFIGURATION
+# ========================
+
+# MongoDB Atlas Connection
+# IMPORTANTE: Reemplaza las credenciales con las tuyas de MongoDB Atlas
+# Formato: mongodb+srv://usuario:contraseña@cluster.mongodb.net/nombre_base_datos?appName=Cluster0
+spring.data.mongodb.uri=mongodb+srv://TU_USUARIO:TU_CONTRASENA@cluster0.gaodo1w.mongodb.net/bolsa_trabajo?appName=Cluster0
+spring.data.mongodb.auto-index-creation=true
+
+# Server Configuration
+server.port=8080
+
+# JWT Configuration
+app.jwt.secret=c3VwZXJTZWNyZXRLZXlGb3JKV1RUb2tlbkdlbmVyYXRpb25JblBlcnNvbmFsRXhwZW5zZXNUcmFja2VyQXBwbGljYXRpb24yMDI0
+app.jwt.expiration=86400000
+
+# Logging Configuration
+logging.level.org.springframework.security=DEBUG
+logging.level.com.bolsa.app=DEBUG
+logging.level.org.springframework.data.mongodb=DEBUG
+
+# Disable JPA (since we're using MongoDB)
+spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration,org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+
